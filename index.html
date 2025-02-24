@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Пожелания</title>
+</head>
+<body>
+    <h1>Напишите свое поздравление Эльмире</h1>
+    <form method="post">
+        <input type="text" name="name" placeholder="Ваше имя" required>
+        <input type="text" name="wish" placeholder="Ваше пожелание" required>
+        <button type="submit">Отправить</button>
+    </form>
+
+    <h2>Сохранённые пожелания</h2>
+    <ul>
+        {% for wish in wishes %}
+            <li><strong>{{ wish[1] }}:</strong> {{ wish[2] }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
